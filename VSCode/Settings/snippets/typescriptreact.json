@@ -1,0 +1,20 @@
+{
+    "Boilerplate": {
+        "prefix": "!r",
+        "body": [
+            "import React, { type FC } from \"react\";",
+            "",
+            "const $1: FC = () => {",
+            "    return (",
+            "        <React.Fragment>",
+            "            <h1>TODO: $1 Component</h1>",
+            "            $0",
+            "        </React.Fragment>",
+            "    );",
+            "};",
+            "",
+            "export default $1;"
+        ],
+        "description": "Component boilerplate for React TSX"
+    }
+}

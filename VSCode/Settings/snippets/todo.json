@@ -1,0 +1,16 @@
+{
+	"Boilerplate": {
+		"prefix": "!",
+		"body": [
+			"Guide:",
+			"    Section:",
+			"        ☐ Ctrl + Enter to make a TODO",
+			"        ☐ Alt + D to mark complete or undo complete",
+			"        ☐ Tags include @critical @high @low @today @1h30m",
+			"        ☐ Formatting include *bold* _italic_ ~strike~ `code`",
+			"",
+			"$0"
+		],
+		"description": "Helper boilerplate for TODO"
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "Boilerplate": {
+        "prefix": "!",
+        "body": [
+            "import java.util.*;",
+            "",
+            "public class $1 {",
+            "    public static void main (String[] args) {",
+            "        System.out.println(\"$0\");",
+            "    }",
+            "}"
+        ],
+        "description": "Class boilerplate for Java"
+    }
+}
