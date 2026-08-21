@@ -1,0 +1,8 @@
+# Global : Temporary development folder
+.dev/
+
+# Global : Temporary files
+*.todo
+
+# Python : Python Environment
+.venv
