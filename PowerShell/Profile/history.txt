@@ -1,0 +1,58 @@
+sudo
+wipe
+venv
+ytm 360p 
+ytm 480p 
+ytm 720p 
+ytm 1080p 
+ytm audio 
+transcript
+npp test.txt
+base64 e test.exe
+base64 d test.txt
+timestamp
+timestamp "01-03-26 12:34:56"
+.
+shutdown /s /t 3600
+mklink /J .dev "E:\Folder"
+robocopy "C:\Core" "D:\Core" /E /MT:32 /NDL /NFL
+npp (Get-PSReadlineOption).HistorySavePath
+..
+git init
+git clone 
+git status
+git add LICENSE
+git commit
+git commit -m "initial commit"
+git add . && git commit
+git merge
+git stash -u
+git stash pop
+git restore .
+git restore --staged .
+git log
+git graph
+git changes | Set-Clipboard
+git history | Set-Clipboard
+git fetch
+git push
+git push -u origin main
+git push -u origin dev
+git switch -c dev
+git switch main
+git switch dev
+git branch -d dev
+git branch -D dev
+git push -u origin -d dev
+git reset HEAD~1
+git rebase -i HEAD~3
+git push -u origin -f main
+...
+npm install
+npm run dev
+npm run compile
+npx wrangler dev
+python test.py
+python script.py
+python -m http.server
+....

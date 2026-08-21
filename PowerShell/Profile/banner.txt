@@ -1,0 +1,15 @@
+ `e[1;32mKunal`e[0m@`e[1;32mIdeaPad`e[0m
+ -------------
+ `e[1;34mShell`e[0m : PowerShell $pwsh
+ `e[1;34mHost`e[0m  : $vendor $name ($model)
+ `e[1;34mOS`e[0m    : $sysver
+ `e[1;34mCPU`e[0m   : $cpu
+ `e[1;34mGPU`e[0m   : $gpu ($vram GiB)
+
+ `e[1;34mIP`e[0m    : $localIP
+ `e[1;34mRAM`e[0m   : $usedGB GiB / $totalGB GiB (`e[32m$percent%`e[0m)
+ `e[1;34mTime`e[0m  : $time
+ 
+ `e[40m   `e[41m   `e[42m   `e[43m   `e[44m   `e[45m   `e[46m   `e[47m   `e[0m
+ `e[100m   `e[101m   `e[102m   `e[103m   `e[104m   `e[105m   `e[106m   `e[107m   `e[0m
+ 
