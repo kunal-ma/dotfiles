@@ -10,23 +10,18 @@ if (-not (Get-Command code -ErrorAction SilentlyContinue)) {
 # Extensions to be installed from the Extension Marketplace
 $extensions = @(
     "edwinhuish.better-comments-next",
-    "formulahendry.code-runner",
     "streetsidesoftware.code-spell-checker",
-    "usernamehw.errorlens",
-    "dbaeumer.vscode-eslint",
-	"github.remotehub",
-    "oderwat.indent-rainbow",
-    "redhat.java",
-    "yandeu.five-server",
     "yzhang.markdown-all-in-one",
-    "christian-kohler.path-intellisense",
     "esbenp.prettier-vscode",
-    "ms-python.vscode-pylance",
     "ms-python.python",
-    "ms-python.debugpy",
-    "kevinrose.vsc-python-indent",
-	"ms-vscode.remote-repositories",
+    # "ms-python.vscode-pylance" included in above
     "vscode-icons-team.vscode-icons"
+)
+
+# Unnecessary extensions bundled with required extensions
+$uninstalls = @(
+    "ms-python.debugpy",
+	"ms-python.vscode-python-envs"
 )
 
 # Extensions to be downloaded from the GitHub release
@@ -48,6 +43,11 @@ $downloadPath = Join-Path $PSScriptRoot "Extensions"
 function Install-Extension($extension) {
     Write-Host "Installing $extension..." -ForegroundColor Yellow
     code --install-extension $extension --force
+}
+
+function Uninstall-Extension($extension) {
+    Write-Host "Uninstalling $extension..." -ForegroundColor Yellow
+    code --uninstall-extension $extension --force
 }
 
 # -----------------------------
@@ -78,6 +78,11 @@ foreach ($file in $files) {
     Invoke-WebRequest $asset.browser_download_url -OutFile $destination
 
     Install-Extension $destination
+}
+
+# Uninstalling useless extensions after all installs
+foreach ($uninstall in $uninstalls) {
+    Uninstall-Extension $uninstall
 }
 
 Write-Host "Finished !" -ForegroundColor Green
