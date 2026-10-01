@@ -13,6 +13,7 @@ base64 d test.txt
 timestamp
 timestamp "01-03-26 12:34:56"
 .
+tree /F | Out-File tree.txt
 shutdown /s /t 3600
 mklink /J .dev "E:\Folder"
 robocopy "C:\Core" "D:\Core" /E /MT:32 /NDL /NFL
@@ -21,7 +22,7 @@ npp (Get-PSReadlineOption).HistorySavePath
 git init
 git clone 
 git status
-git add LICENSE
+git add README.md
 git commit
 git commit -m "initial commit"
 git add . && git commit
@@ -30,10 +31,11 @@ git stash -u
 git stash pop
 git restore .
 git restore --staged .
-git log
-git graph
-git changes | Set-Clipboard
-git history | Set-Clipboard
+git log --oneline
+git logs
+git graph | Set-Clipboard
+git diff HEAD | Set-Clipboard
+git prune
 git fetch
 git push
 git push -u origin main
@@ -55,4 +57,8 @@ npx wrangler dev
 python test.py
 python script.py
 python -m http.server
+java -jar test.jar
+mvn wrapper:wrapper
+mvn clean package
+mvn spring-boot:run
 ....
