@@ -37,3 +37,11 @@
 [alias]
     logs = log -p --stat --pretty=fuller
     graph = log --oneline --graph --all --decorate
+    compare = "!f() { \
+        index=$(git rev-parse --git-path index) || exit 1; \
+        tmp=$(mktemp) || exit 1; \
+        trap 'rm -f \"$tmp\"' EXIT; \
+        cp \"$index\" \"$tmp\" || exit 1; \
+        GIT_INDEX_FILE=\"$tmp\" git add -N -- . || exit $?; \
+        GIT_INDEX_FILE=\"$tmp\" git diff --full-index -- \"$@\"; \
+    }; f"

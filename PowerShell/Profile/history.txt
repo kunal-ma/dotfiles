@@ -13,42 +13,39 @@ base64 d test.txt
 timestamp
 timestamp "01-03-26 12:34:56"
 .
-tree /F | Out-File tree.txt
 shutdown /s /t 3600
 mklink /J .dev "E:\Folder"
+tree /F | Out-File tree.txt
 robocopy "C:\Core" "D:\Core" /E /MT:32 /NDL /NFL
 npp (Get-PSReadlineOption).HistorySavePath
 ..
 git init
 git clone 
+git clone https://github.com/kunal-ma/
 git status
-git add README.md
+git add .
+git add . && git commit
+git add LICENSE
+git stash
+git stash pop
 git commit
 git commit -m "initial commit"
-git add . && git commit
-git merge
-git stash -u
-git stash pop
-git restore .
-git restore --staged .
+git diff | Set-Clipboard
+git compare > E:\GitHub\changes.patch
+git compare | Set-Clipboard
+git apply E:\GitHub\changes.patch
 git log --oneline
-git logs
+git logs | Set-Clipboard
 git graph | Set-Clipboard
-git diff HEAD | Set-Clipboard
-git prune
-git fetch
-git push
-git push -u origin main
-git push -u origin dev
-git switch -c dev
+git switch -c feature/gallery
 git switch main
-git switch dev
-git branch -d dev
-git branch -D dev
-git push -u origin -d dev
+git branch -D develop
 git reset HEAD~1
 git rebase -i HEAD~3
-git push -u origin -f main
+git pull origin
+git fetch --prune
+git push origin
+git push origin --delete dev
 ...
 npm install
 npm run dev
